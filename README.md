@@ -40,3 +40,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 git remote add origin https://github.com/GBMCdev/alchemyst.git
 git branch -M main
 git push -u origin main
+
+git add .
+git commit -m ""
+git push -u origin main
