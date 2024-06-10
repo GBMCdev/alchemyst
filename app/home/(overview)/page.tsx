@@ -9,7 +9,7 @@ export default function Welcome() {
   const PUMP_FUN_LINK = "https://pump.fun/board";
 
   return (
-    <main className="flex flex-col h-full items-center justify-start">
+    <main className="flex flex-col h-full items-center justify-start bg-black overflow-hidden">
       {/* BACKGROUND */}
       <div className="flex w-screen overflow-hidden justify-center">
         <div className="flex-none w-[1500px] h-[500px]">
@@ -22,9 +22,17 @@ export default function Welcome() {
           />
         </div>
       </div>
+      {/* WELCOME MESSAGE*/}
+      <div className="absolute top-[150px] h-[200px] w-[400px] justify-center items-center">
+        <p
+          className={`absolute top-[-10px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-sm `}
+        >
+          Welcome crypto explorers and SOL farmers !
+        </p>
+      </div>
       {/* TABLE SHADOW */}
       <motion.div
-        className="absolute opacity-95 top-[320px] h-[500px] w-[600px] bg-black rounded-full blur-xl"
+        className="absolute opacity-95 top-[330px] h-[300px] w-[400px] bg-black rounded-full blur-xl"
         animate={{
           scale: [1, 1.05, 1, 1.15, 1],
         }}
@@ -38,28 +46,6 @@ export default function Welcome() {
       />
       {/* CANVA */}
       <div className="absolute top-[300px] h-[500px] w-[500px]">
-        {/* CHEST */}
-        <div className="absolute top-[120px] left-[450px] h-[250px] w-[250px] justify-center items-center">
-          <div className="relative inline-flex group">
-            <div className="h-[250px] w-[250px] transitiona-all duration-1000 opacity-0 -inset-px bg-gradient-to-r from-[#ED9021] via-[#F7F54C] to-[#F6D331] rounded-full blur-xl group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt"></div>
-            <a
-              href="#"
-              target="_blank"
-              title="LP Quest"
-              className={"absolute"}
-              role="button"
-            >
-              <motion.img
-                alt=""
-                key={"chest"}
-                src={"/chest.png"}
-                width={250}
-                whileHover={{ scale: 1.2 }}
-                height={250}
-              />
-            </a>
-          </div>
-        </div>
         {/* TABLE */}
         <Image src="/table.png" alt="table" width={500} height={500} priority />
         {/* BOTTLE */}
@@ -74,7 +60,7 @@ export default function Welcome() {
         />
         {/* MOJO */}
         <motion.img
-          className="absolute top-[70px] left-[440px]"
+          className="absolute top-[0px] left-[320px]"
           key={"mojo"}
           src={"/mojo.png"}
           width={80}
@@ -92,27 +78,6 @@ export default function Welcome() {
           style={{ rotate: 30 }}
         />
 
-        {/* TWITTER BOOK */}
-        <div className="absolute top-[150px] left-[-170px] h-[200px] w-[200px] justify-center items-center">
-          <div className="relative inline-flex group">
-            <div className="h-[200px] w-[200px] transitiona-all duration-1000 opacity-0 -inset-px bg-gradient-to-r from-[#E30898] via-[#6369C6] to-[#94E0E7] rounded-full blur-xl group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt"></div>
-            <a
-              href={TWITTER_LINK}
-              title="Go to X.com"
-              target="_blank"
-              className={"absolute"}
-              role="button"
-            >
-              <motion.img
-                alt=""
-                src={"/grimTwitter.png"}
-                width={200}
-                whileHover={{ scale: 1.2 }}
-                height={200}
-              />
-            </a>
-          </div>
-        </div>
         {/* POPUP BOOK AURA */}
         <motion.div
           className="absolute top-[65px] left-[40px] h-20 w-20  opacity-80 bg-gradient-to-r from-[#A16EE9] via-[#6369C6] to-[#5394EC] rounded-full blur-md"
@@ -234,6 +199,60 @@ export default function Welcome() {
               role="button"
             >
               {CONTRACT_ADDRESS}
+            </a>
+          </div>
+        </div>
+
+        {/* TWITTER BOOK */}
+        <div className="absolute bottom-[-80px] left-[15px] h-[200px] w-[200px] justify-center items-center">
+          <div className="relative inline-flex group">
+            <div className="h-[200px] w-[200px] transitiona-all duration-1000 opacity-0 -inset-px bg-gradient-to-r from-[#E30898] via-[#6369C6] to-[#94E0E7] rounded-full blur-xl group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt"></div>
+            <a
+              href={TWITTER_LINK}
+              title="Go to X.com"
+              target="_blank"
+              className={"absolute"}
+              role="button"
+            >
+              <motion.img
+                alt=""
+                src={"/grimTwitter.png"}
+                width={200}
+                whileHover={{ scale: 1.2 }}
+                height={200}
+              />
+              <p
+                className={`absolute top-[-10px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-sm `}
+              >
+                {"Follow us on X"}
+              </p>
+            </a>
+          </div>
+        </div>
+        {/* CHEST */}
+        <div className="absolute bottom-[-80px] right-[15px] h-[200px] w-[200px] justify-center items-center">
+          <div className="relative inline-flex group">
+            <div className="h-[200px] w-[200px] transitiona-all duration-1000 opacity-0 -inset-px bg-gradient-to-r from-[#ED9021] via-[#F7F54C] to-[#F6D331] rounded-full blur-xl group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt"></div>
+            <a
+              href="#"
+              target="_blank"
+              title="LP Quest"
+              className={"absolute"}
+              role="button"
+            >
+              <motion.img
+                alt=""
+                key={"chest"}
+                src={"/chest.png"}
+                width={250}
+                whileHover={{ scale: 1.2 }}
+                height={250}
+              />
+              <p
+                className={`absolute top-[-10px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-sm `}
+              >
+                {" Too much sol ? Send some to us ;)"}
+              </p>
             </a>
           </div>
         </div>
