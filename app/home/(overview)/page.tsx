@@ -196,7 +196,7 @@ export default function Welcome() {
         />
         {/* LABEL CONTRACT */}
         <p
-          className={`absolute top-[15px] left-[10px] right-[0px] text-center text-lg `}
+          className={`absolute top-[15px] left-[10px] right-[0px] text-center text-white text-lg `}
         >
           Magic Contract :
         </p>
@@ -215,9 +215,11 @@ export default function Welcome() {
             </a>
           </div>
         </div>
-
+      </div>
+      {/* CONTENT */}
+      <div className="absolute top-[720px] h-[500px] w-[500px]">
         {/* TWITTER BOOK */}
-        <div className="absolute bottom-[-80px] left-[15px] h-[200px] w-[200px] justify-center items-center">
+        <div className="absolute top-[0px] left-[40px] h-[200px] w-[200px] justify-center items-center">
           <div className="relative inline-flex group">
             <div className="h-[200px] w-[200px] transitiona-all duration-1000 opacity-0 -inset-px bg-gradient-to-r from-[#E30898] via-[#6369C6] to-[#94E0E7] rounded-full blur-xl group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt"></div>
             <a
@@ -231,7 +233,7 @@ export default function Welcome() {
                 alt=""
                 src={"/grimTwitter.png"}
                 width={200}
-                whileHover={{ scale: 1.2 }}
+                whileHover={{ scale: 1.1 }}
                 height={200}
               />
               <p
@@ -243,7 +245,7 @@ export default function Welcome() {
           </div>
         </div>
         {/* CHEST */}
-        <div className="absolute bottom-[-80px] right-[15px] h-[200px] w-[200px] justify-center items-center">
+        <div className="absolute top-[0px] right-[40px] h-[200px] w-[200px] justify-center items-center">
           <div className="relative inline-flex group">
             <div className="h-[200px] w-[200px] transitiona-all duration-1000 opacity-0 -inset-px bg-gradient-to-r from-[#ED9021] via-[#F7F54C] to-[#F6D331] rounded-full blur-xl group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt"></div>
             <a
@@ -257,7 +259,7 @@ export default function Welcome() {
                 key={"chest"}
                 src={"/chest.png"}
                 width={200}
-                whileHover={{ scale: 1.2 }}
+                whileHover={{ scale: 1.1 }}
                 height={200}
               />
               <p
