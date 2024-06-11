@@ -217,11 +217,11 @@ export default function Welcome() {
         </div>
       </div>
       {/* CONTENT */}
-      <div className="absolute top-[720px] h-[500px] w-[500px]">
+      <div className="absolute top-[720px] h-[400px] w-[500px] p-[50px]">
         {/* TWITTER BOOK */}
-        <div className="absolute top-[0px] left-[40px] h-[200px] w-[200px] justify-center items-center">
+        <div className=" flex flex-none flex-row justify-center items-center ">
           <div className="relative inline-flex group">
-            <div className="h-[200px] w-[200px] transitiona-all duration-1000 opacity-0 -inset-px bg-gradient-to-r from-[#E30898] via-[#6369C6] to-[#94E0E7] rounded-full blur-xl group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt"></div>
+            <div className="h-[150px] w-[150px] transitiona-all duration-1000 opacity-0 -inset-px bg-gradient-to-r from-[#E30898] via-[#6369C6] to-[#94E0E7] rounded-full blur-xl group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt"></div>
             <a
               href={TWITTER_LINK}
               title="Go to X.com"
@@ -232,22 +232,22 @@ export default function Welcome() {
               <motion.img
                 alt=""
                 src={"/grimTwitter.png"}
-                width={200}
+                width={150}
                 whileHover={{ scale: 1.1 }}
-                height={200}
+                height={150}
               />
-              <p
-                className={`absolute top-[-10px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white text-sm `}
-              >
-                {"Follow us on X"}
-              </p>
             </a>
           </div>
+          <p className={` text-center text-white text-sm `}>
+            {
+              "Ready for what's next? Click on Elon's book and join us on X! This is just the first page of the story!"
+            }
+          </p>
         </div>
         {/* CHEST */}
-        <div className="absolute top-[0px] right-[40px] h-[200px] w-[200px] justify-center items-center">
+        <div className="flex flex-none flex-row justify-center items-center ">
           <div className="relative inline-flex group">
-            <div className="h-[200px] w-[200px] transitiona-all duration-1000 opacity-0 -inset-px bg-gradient-to-r from-[#ED9021] via-[#F7F54C] to-[#F6D331] rounded-full blur-xl group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt"></div>
+            <div className="h-[150px] w-[150px] transitiona-all duration-1000 opacity-0 -inset-px bg-gradient-to-r from-[#ED9021] via-[#F7F54C] to-[#F6D331] rounded-full blur-xl group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt"></div>
             <a
               onClick={() => handleCopy()}
               title="Click to copy"
@@ -258,17 +258,25 @@ export default function Welcome() {
                 alt=""
                 key={"chest"}
                 src={"/chest.png"}
-                width={200}
+                width={150}
                 whileHover={{ scale: 1.1 }}
-                height={200}
+                height={150}
               />
-              <p
-                className={`absolute top-[-10px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white text-sm `}
-              >
-                {"Founders"}
-              </p>
             </a>
           </div>
+          <p className={`text-center text-white text-sm`}>
+            {
+              "You have the soul of an investor? Join the adventure and support us! Click on the chest to copy our wallet address"
+            }
+          </p>
+        </div>
+        {/* DISCLAIMER */}
+        <div className="flex flex-none flex-row justify-center items-center my-[20px] ">
+          <p className={`text-center text-zinc-600 text-xs`}>
+            {
+              "DISCLAIMER: ALCHEMYST WAS MADE FOR ENTERTAINMENT AND HAS NO VALUE. DON’T RISK MONEY YOU ARE AFRAID OF LOSING.THE PRICE MAY GO UP OR IT MAY GO DOWN. WE ARE NOT RESPONSIBLE FOR THE PRICE OF THE TOKEN."
+            }
+          </p>
         </div>
       </div>
     </main>
