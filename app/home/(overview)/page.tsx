@@ -2,14 +2,27 @@
 import Image from "next/image";
 import { almendra } from "@/app/ui/fonts";
 import { motion } from "framer-motion";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+function copyText(data: string) {
+  navigator.clipboard.writeText(data);
+}
 
 export default function Welcome() {
   const CONTRACT_ADDRESS = "...SOON...";
   const TWITTER_LINK = "https://x.com/GBMCCornelius";
   const PUMP_FUN_LINK = "https://pump.fun/board";
+  const TREASURE_PUBLIC_KEY = "J5wCL5ZnvvLJwbHpuxwSdeyLEuPikCiH5QhjpYZ91559";
+
+  const handleCopy = () => {
+    copyText(TREASURE_PUBLIC_KEY);
+    toast("Address copied !");
+  };
 
   return (
     <main className="flex flex-col h-full items-center justify-start bg-black overflow-hidden">
+      <ToastContainer />
       {/* BACKGROUND */}
       <div className="flex w-screen overflow-hidden justify-center">
         <div className="flex-none w-[1500px] h-[500px]">
@@ -25,7 +38,7 @@ export default function Welcome() {
       {/* WELCOME MESSAGE*/}
       <div className="absolute top-[150px] h-[200px] w-[400px] justify-center items-center">
         <p
-          className={`absolute top-[-10px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-sm `}
+          className={`absolute top-[-10px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white text-sm `}
         >
           Welcome crypto explorers and SOL farmers !
         </p>
@@ -195,7 +208,7 @@ export default function Welcome() {
               href={PUMP_FUN_LINK}
               target="_blank"
               title="Magic Contract"
-              className={`${almendra.className} w-32 text-wrap text-center break-all relative inline-flex items-center justify-center text-lg text-white `}
+              className={`${almendra.className} text-white w-32 text-wrap text-center break-all relative inline-flex items-center justify-center text-lg text-white `}
               role="button"
             >
               {CONTRACT_ADDRESS}
@@ -222,7 +235,7 @@ export default function Welcome() {
                 height={200}
               />
               <p
-                className={`absolute top-[-10px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-sm `}
+                className={`absolute top-[-10px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white text-sm `}
               >
                 {"Follow us on X"}
               </p>
@@ -234,9 +247,8 @@ export default function Welcome() {
           <div className="relative inline-flex group">
             <div className="h-[200px] w-[200px] transitiona-all duration-1000 opacity-0 -inset-px bg-gradient-to-r from-[#ED9021] via-[#F7F54C] to-[#F6D331] rounded-full blur-xl group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt"></div>
             <a
-              href="#"
-              target="_blank"
-              title="LP Quest"
+              onClick={() => handleCopy()}
+              title="Click to copy"
               className={"absolute"}
               role="button"
             >
@@ -244,14 +256,14 @@ export default function Welcome() {
                 alt=""
                 key={"chest"}
                 src={"/chest.png"}
-                width={250}
+                width={200}
                 whileHover={{ scale: 1.2 }}
-                height={250}
+                height={200}
               />
               <p
-                className={`absolute top-[-10px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-sm `}
+                className={`absolute top-[-10px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white text-sm `}
               >
-                {" Too much sol ? Send some to us ;)"}
+                {"Founders"}
               </p>
             </a>
           </div>

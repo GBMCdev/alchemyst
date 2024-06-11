@@ -12,7 +12,9 @@ export default function NavLinks() {
           <Link
             key={link.name}
             href={link.href}
-            className={" p-3 text-sm font-medium hover:text-blue-600"}
+            className={
+              " p-3 text-sm font-medium text-white hover:text-blue-600"
+            }
           >
             <p>{link.name}</p>
           </Link>
