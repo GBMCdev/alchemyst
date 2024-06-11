@@ -10,9 +10,10 @@ function copyText(data: string) {
 }
 
 export default function Welcome() {
-  const CONTRACT_ADDRESS = "...SOON...";
+  const CONTRACT_ADDRESS = "2cJcGsr7K2LiixQicAPXwukngH7iQaResWqfsQptpump";
   const TWITTER_LINK = "https://x.com/GBMCCornelius";
-  const PUMP_FUN_LINK = "https://pump.fun/board";
+  const PUMP_FUN_LINK =
+    "https://pump.fun/2cJcGsr7K2LiixQicAPXwukngH7iQaResWqfsQptpump";
   const TREASURE_PUBLIC_KEY = "J5wCL5ZnvvLJwbHpuxwSdeyLEuPikCiH5QhjpYZ91559";
 
   const handleCopy = () => {
@@ -198,7 +199,7 @@ export default function Welcome() {
         <p
           className={`absolute top-[15px] left-[10px] right-[0px] text-center text-white text-lg `}
         >
-          Magic Contract :
+          Magic contract :
         </p>
         {/* CONTRACT */}
         <div className="absolute top-[100px] left-[190px] right-[200px]justify-center items-center">
