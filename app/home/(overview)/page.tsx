@@ -10,10 +10,9 @@ function copyText(data: string) {
 }
 
 export default function Welcome() {
-  const CONTRACT_ADDRESS = "2cJcGsr7K2LiixQicAPXwukngH7iQaResWqfsQptpump";
+  const CONTRACT_ADDRESS = "COMING SOON";
   const TWITTER_LINK = "https://x.com/GBMCCornelius";
-  const PUMP_FUN_LINK =
-    "https://pump.fun/2cJcGsr7K2LiixQicAPXwukngH7iQaResWqfsQptpump";
+  const PUMP_FUN_LINK = "https://dexscreener.com/moonshot";
   const TREASURE_PUBLIC_KEY = "J5wCL5ZnvvLJwbHpuxwSdeyLEuPikCiH5QhjpYZ91559";
 
   const handleCopy = () => {
