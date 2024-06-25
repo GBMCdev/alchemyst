@@ -10,7 +10,7 @@ function copyText(data: string) {
 }
 
 export default function Welcome() {
-  const CONTRACT_ADDRESS = "COMING SOON";
+  const CONTRACT_ADDRESS = "BQJSuGHWhGn69YuscYgxXfGGFGY6ihZ5aBQwHMfXtVsX";
   const TWITTER_LINK = "https://x.com/GBMCCornelius";
   const PUMP_FUN_LINK = "https://dexscreener.com/moonshot";
   const TREASURE_PUBLIC_KEY = "J5wCL5ZnvvLJwbHpuxwSdeyLEuPikCiH5QhjpYZ91559";
